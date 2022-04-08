@@ -5,13 +5,22 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./src/estilos.css" />
   </head>
-
+<script type="text/javascript">
+  function MuestraOculta() {
+    var x = document.getElementById("ocultos");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
   <body>
     <header>
       <div>
         <div class="logo"><img src="./src/img/Logo_NetFlix.jpg" /></div>
         <div class="assets">
-          <div>
+          <div class="nav-pc">
             <ul>
               <li>Inicio</li>
               <li>Series TV</li>
@@ -20,11 +29,21 @@
               <li>Mi lista</li>
             </ul>
           </div>
+          <div class="nav-media">
+            <div class="hamburguesa"><img src="./src/img/hamburguesa.png" onclick="MuestraOculta('.faldon')" /></div>
+            <div id="ocultos">
+            <div>Inicio</div>
+            <div>Series TV</div>
+            <div>Películas</div>
+            <div>Novedades más vistas</div>
+            <div>Mi lista</div>
+            </div>
+          </div>
           <div>
             <ul id="nav-iconos">
               <li><img id="search" src="./src/img/lupa.png" /></li>
               <li>Infantil</li>
-              <li><img src="./src/img/campana.png"</li>
+              <li><img src="./src/img/campana.png" /></li>
               <li><img src="./src/img/smile.png" /></li>  
               <li><img src="./src/img/triangle.png" /></li>
             </ul>
